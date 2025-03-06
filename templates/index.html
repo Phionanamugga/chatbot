@@ -1,0 +1,19 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Google-Powered Chatbot</h1>
+    <form method="POST">
+        <input type="text" name="query" placeholder="Ask me anything!" value="{{ query or '' }}">
+        <button type="submit">Submit</button>
+    </form>
+    {% if response %}
+        <h3>Response:</h3>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
+
